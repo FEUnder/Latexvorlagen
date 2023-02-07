@@ -1,0 +1,80 @@
+\documentclass{scrarticle}
+\usepackage[
+%showframe,
+left=2cm,
+right=2cm,
+top=2cm,
+bottom=2cm
+]{geometry} %Layout des Dokuments
+
+\usepackage[table]{xcolor} %Farbe für Tabelle
+\begin{document}
+	\section{Tabelle ohne Linien}
+	\begin{tabular}[hbt]{lcr} %left, center, right
+		Spalte 1.1 & Spalte 2 & Spalte 3 \\
+		Spalte 1.2 & Spalte 2.2 & Spalte 3.2\\
+		Spalte 1.3 & Spalte 2.3 & Spalte 3.3 \\
+	\end{tabular}
+
+	\section{Tabelle mit Zwischenlinien}
+	\begin{tabular}[hbt]{l|c|r} %left, center, right
+		Spalte 1.1 & Spalte 2 & Spalte 3 \\ \hline
+		Spalte 1.2 & Spalte 2.2 & Spalte 3.3\\ \hline
+		Spalte 1.3 & Spalte 2.3 & Spalte 3.3 \\
+	\end{tabular}
+
+	\section{Multicolumn}
+	\begin{tabular}[hbt]{|c|c|c|c|r|}
+		\hline
+		\multicolumn{3}{|c|}{Spalte 1.1} & Spalte 2 & Spalte 3 \\ \hline
+		Spalte 1.2 & Spalte 2.2 & Spalte 3.2 & Spalte 4.2 & Spalte 5.2\\ \hline
+		Spalte 1.3 & Spalte 2.3 & Spalte 3.3 & Spalte 4.3 & Spalte 5.3\\ \hline
+	\end{tabular}
+
+	\section{Größe einer Tabelle ändern}
+	\begin{tabular*}{\textwidth}[hbt]{p{5cm}|p{2cm}|p{5cm}}
+		Spalte 1.1 & Spalte 2 & Spalte 3 \\ \hline
+		Spalte 1.2 & Spalte 2.2 & Spalte 3.3\\ \hline
+		Spalte 1.3 & Spalte 2.3 & Spalte 3.3 \\
+	\end{tabular*}
+
+	\section{Eine vertikale Linie hinzufügen}
+	\begin{tabular}[hbt]{|l|c|r|} %left, center, right
+		\hline
+		Spalte 1.1\vline Spalte 2 & Spalte 3 & Spalte 4\\ \hline
+		Spalte 1.2 & Spalte 2.2 \vline Spalte 3.2 & Spalte 4.2\\ \hline
+		Spalte 1.3 & Spalte 2.3 & Spalte 3.3 \vline Spalte 4.3\\ \hline
+	\end{tabular}
+
+	\section{Beliebige Größe einer Spalte oder Reihe}
+	\begin{tabular}[hbt]{l|c|r} %left, center, right
+		{\rule[-12mm]{0cm}{15mm}} %Erzeugt ein schwarze Box [lift]{Breite}{Höhe}
+		Spalte 1.1 \hspace{5cm} & Spalte 2 & Spalte 3 \\ \hline
+		Spalte 1.2 & Spalte 2.2 & Spalte 3.3\\ \hline
+		Spalte 1.3 & Spalte 2.3 & Spalte 3.3 \\
+	\end{tabular}
+	\newpage
+	\section{Tabelle mit Überschrift}
+	\begin{table}[hbt]
+		\centering
+		\caption{Automatisierungsgrade}
+		\begin{tabular*}{\textwidth}{|p{5.24cm}|p{5.24cm}|p{5.24cm}|}
+			\hline
+			Spalte 1.1 & Spalte 2 & Spalte 3 \\ \hline
+			Spalte 1.2 & Spalte 2.2 & Spalte 3.3\\ \hline
+			Spalte 1.3 & Spalte 2.3 & Spalte 3.3 \\ \hline
+		\end{tabular*}
+	\end{table}
+
+	\section{Tabelle mit Farben} %Aufpassen, je nach PDF Viewer sieht es schlecht aus bzw. buggy!
+	{\rowcolors{2}{green!80!yellow!50}{green!70!yellow!40}
+	\begin{tabular*}{\textwidth}{|p{5.24cm}|p{5.24cm}|p{5.24cm}|}
+		\hline
+		Spalte 1.1 & Spalte 2 & Spalte 3 \\ \hline
+		Spalte 1.2 & Spalte 2.2 & Spalte 3.3\\ \hline
+		Spalte 1.3 & Spalte 2.3 & Spalte 3.3 \\ \hline
+		Spalte 1.4 & Spalte 2.4 & Spalte 3.4 \\ \hline
+		Spalte 1.5 & Spalte 2.5 & Spalte 3.5 \\ \hline
+	\end{tabular*}
+	}
+\end{document}

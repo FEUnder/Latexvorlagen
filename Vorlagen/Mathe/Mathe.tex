@@ -1,0 +1,96 @@
+\documentclass{scrarticle}
+\usepackage[
+%showframe,
+left=2cm,
+right=2cm,
+top=2cm,
+bottom=2cm
+]{geometry} %Layout des Dokuments
+
+\usepackage{amsmath}
+
+\begin{document}
+	\Large
+	\section{Bruch}
+	$\frac{X}{Y}$ \\
+	$\frac{\text{Zähler}}{\text{Nenner}}$
+	\section{Summe}
+	$\sum$
+	\section{Multiplikation}
+	$\cdot$ \\
+	$\coprod$
+	\section{Integral}
+	$\int_{untere Zahl}^{obere Zahl}$
+	\section{Tiefgestellte Zahl}
+	$Zahl_{tiefgestellte Zahl}$
+	\\\\\textit{Hinweis: Dies gilt auch für Symbole, bspw. Summen-Zeichen!}
+	\section{Hochgestellte Zahl}
+	$Zahl^{hochgestellte Zahl}$
+	\\\\\textit{Hinweis: Dies gilt auch für Symbole, bspw. Summen-Zeichen!}
+	\section{Hochgestellte und Tiefgestellte Zahl}
+	$Zahl^{hochgestellte Zahl}_{tiefgestellte Zahl}$
+	\\\\\textit{Hinweis: Dies gilt auch für Symbole, bspw. Summen-Zeichen!}
+	
+	\newpage
+	
+	\section{Mathematische Umgebungen}
+	\begin{equation} \label{eq1}
+		\begin{split}
+			 X 	&= 1 + 2\\
+				&= 1 + 1 + 1 \\
+				&= 3
+		\end{split}
+	\end{equation}
+
+	\begin{multline*}
+		f(x) = 12x + 36x^2 + 76x^3 + 112x^4 + 224x^5\\
+		 + 554x^6 + 129x^7 + 1337x^8 + 66x^9
+	\end{multline*}
+
+	\begin{align}
+		 X &= 1 + 2 	& Y  &= 1 - 2\\
+		   &= 1 + 1 + 1 &	 &= 1 - 1 - 1\\
+		   &= 3 		&	 &= -1\\
+		 X &= 3 		& Y  &= -1  
+	\end{align}
+	\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}} %Hilfreicher Command, um die Nummerierung beizubehalten
+	\begin{align*}
+		X	&= 1 + 2 		& Y &= 1 - 2\\
+			&= 1 + 1 + 1 	& 	&= 1 - 1 - 1\\
+			&= 3 			& 	&= -1\\
+		X	&= 3 			& Y &= -1 \numberthis
+	\end{align*}
+
+	\begin{align}
+		X	&= 1 + 2 		& Y &= 1 - 2\nonumber \\
+		&= 1 + 1 + 1 	& 	&= 1 - 1 - 1\nonumber \\
+		&= 3 			& 	&= -1		\nonumber \\
+		X	&= 3 			& Y &= -1	
+	\end{align}
+
+	\newpage
+
+	\section{Sonderzeichen (seltenere Fälle)}
+	$\approx$ \\
+	$\sim$ \\
+	$\neq$ \\
+	$\rightarrow$ \\
+	$\leftarrow$
+	
+	\vspace*{1cm}
+	\noindent
+	$\bigcap$ \\
+	$\bigvee$ \\
+	$\bigcup$ \\
+	$\bigwedge$ \\
+	$\bigotimes$ \\
+	$\bigoplus$
+	
+	\vspace*{1cm}
+	\noindent
+	
+	$\pi$
+	\section{Einheiten}
+	$\mu$ %Mikro
+
+\end{document}

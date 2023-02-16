@@ -1,0 +1,61 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{Beispiel}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a1340ce3daa99823346adaeab80ed549}{%
+           family={Adams},
+           familyi={A\bibinitperiod},
+           given={Douglas},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a1340ce3daa99823346adaeab80ed549}
+      \strng{fullhash}{a1340ce3daa99823346adaeab80ed549}
+      \strng{bibnamehash}{a1340ce3daa99823346adaeab80ed549}
+      \strng{authorbibnamehash}{a1340ce3daa99823346adaeab80ed549}
+      \strng{authornamehash}{a1340ce3daa99823346adaeab80ed549}
+      \strng{authorfullhash}{a1340ce3daa99823346adaeab80ed549}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3453146976}
+      \field{month}{1}
+      \field{title}{{Per Anhalter durch die Galaxis}}
+      \field{urlday}{16}
+      \field{urlmonth}{2}
+      \field{urlyear}{2023}
+      \field{year}{2009}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.amazon.de/Anhalter-durch-die-Galaxis/dp/3453146972
+      \endverb
+      \verb{url}
+      \verb https://www.amazon.de/Anhalter-durch-die-Galaxis/dp/3453146972
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

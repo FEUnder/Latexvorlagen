@@ -1,0 +1,76 @@
+\documentclass{scrarticle}
+\usepackage[
+%showframe,
+left=2cm,
+right=2cm,
+top=2cm,
+bottom=2cm
+]{geometry} %Layout des Dokuments
+\usepackage{listings}
+
+\usepackage{hyperref}
+\usepackage[ngerman]{babel}
+\usepackage[backend=biber,
+style=authoryear,
+natbib=true,
+url= true,
+urldate = comp,
+dateabbrev = false,
+backref = false,
+maxcitenames = 2,
+sortcites = false
+]{biblatex}
+\addbibresource{literatur.bib}
+\DefineBibliographyStrings{german}{
+	andothers = {et al.}}
+\DefineBibliographyStrings{ngerman}{%
+	urlseen = {Abruf vom}}
+\renewcommand*{\nameyeardelim}{\space}
+
+\begin{document}
+	\section{Literatur}
+	Für die Literatur empfiehlt es sich eine .bib-Datei anzulegen. Hier für gibt es diverse Programme, die man für die Pflege der Quellen verwenden kann. Ich persönlich empfehle \textbf{JabRef}.\\\\\noindent
+	Folgender Codeblock wird verwendet, um das Literaturverzeichnis in \textbf{Harvard-Style} zu formatieren. (Angepasst auf meine Bedürfnisse, muss entsprechend überarbeitet werden...):
+	\begin{lstlisting}[language=TeX]
+		\usepackage{hyperref}
+		\usepackage[ngerman]{babel}
+		\usepackage[backend=biber,
+		style=authoryear,
+		natbib=true,
+		url= true,
+		urldate = comp,
+		dateabbrev = false,
+		backref = false,
+		maxcitenames = 2,
+		sortcites = false
+		]{biblatex}
+		\DefineBibliographyStrings{german}{
+			andothers = {et al.}}
+		\DefineBibliographyStrings{ngerman}{%
+			urlseen = {Abruf vom}}
+		\renewcommand*{\nameyeardelim}{\space}
+	\end{lstlisting}
+	\vspace*{1cm}\noindent
+	Um eine Bibliothek (.bib) einzubinden, benötigt man folgenden Code: 
+	\begin{lstlisting}[language=TeX]
+		\addbibresource{Deine-Bibliothek.bib}
+	\end{lstlisting}
+	Dies sollte möglichst vor dem $\backslash$DefineBibliographyStrings... passieren.
+
+	\section{Zitieren}
+	Hierfür gibt es mehrere Möglichkeiten:
+	\begin{itemize}
+		\item $\backslash$autocite\{Cite-Key\} $\rightarrow$ Ist für die Harvard-Style (und Formatierung von mir) die beste Auswahl: \autocite{Beispiel}
+		\item $\backslash$autocite[vorne stehend][hinten stehend]\{Cite-Key\}: \autocite[vgl.][S.42]{Beispiel}
+		\item  $\backslash$cite\{Cite-Key\}: \cite{Beispiel}
+		\item $\backslash$cite[vorne stehend][hinten stehend]\{Cite-Key\}: \cite[vgl.][S.42]{Beispiel}
+	\end{itemize}
+	
+	\newpage
+	
+	\section{Literaturverzeichnis}
+	%Diesen Code am Ende hinzufügen, und es sollte passen.
+	\setcounter{biburllcpenalty}{9000}% Kleinbuchstaben
+	\setcounter{biburlucpenalty}{9000}% Großbuchstaben
+	\printbibliography[title=Literaturverzeichnis]
+\end{document}

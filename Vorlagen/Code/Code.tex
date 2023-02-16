@@ -1,0 +1,63 @@
+\documentclass{scrarticle}
+\usepackage[
+%showframe,
+left=2cm,
+right=2cm,
+top=2cm,
+bottom=2cm
+]{geometry} %Layout des Dokuments
+\usepackage{hyperref}
+
+\usepackage{listings}
+\usepackage{color}
+\definecolor{lst-gray}{rgb}{0.98,0.98,0.98}
+\definecolor{lst-blue}{RGB}{40,0.0,255}
+\definecolor{lst-green}{RGB}{65,128,95}
+\definecolor{lst-red}{RGB}{200,0,85}
+\lstset{
+	commentstyle=\color{lst-green},
+	basicstyle=\small\ttfamily,
+	backgroundcolor=\color{lst-gray},
+	breaklines=true,
+	captionpos=b,
+	columns=fixed,
+	extendedchars=true,
+	escapeinside={(*}{*)}, 
+	frame=single,
+	framesep=2pt,
+	keepspaces=true,
+	keywordstyle=\color{lst-blue},
+	language={TeX},
+	numbers=left,
+	numberstyle=\small\ttfamily,
+	showstringspaces=false,
+	stringstyle=\color{lst-red},
+	tabsize=2,
+}
+\begin{document}
+	\section{Code}
+	LaTeX (TeXstudio) ist in der Lage, gewisse Code-Blöcke zu erstellen, die man im Anhang einer Hausarbeit ... anfügen sollte. Hierbei ist zu erwähnen, dass es ab einer gewissen Größe und Komplexität ein Problem hat, dieses zu importieren $\rightarrow$ Google hilft meistens da aus.
+	\\\\\noindent
+	Für die Einstellung sollte folgendes Übernommen werden:
+	\lstinputlisting[language=TeX]{Einstellungen.txt}
+	\vspace*{1cm}\noindent
+	Es gibt zusätzlich viele weitere Informationen, da hilft ebenso Google - Hier aber vorab schon eine hilf-reiche Seite:
+	\href{https://en.wikibooks.org/wiki/LaTeX/Source\_Code\_Listings}{LateX-Hilfe für Code-Einbindung (https://en.wikibooks.org/wiki/LaTeX/Source\_Code\_Listings)}
+	
+	\section{Einbindung durch externe Datei}
+	\lstinputlisting[language=TeX]{lstlisting-example.txt} %Einbindung durch eine externe Datei (ist meistens hilfreich für die Übersicht)
+	
+	\section{Externe Datei und gewählte Zeilen}
+	\lstinputlisting[language=TeX, firstline=2, lastline=4]{lstlisting-example.txt} %Einbindung durch eine externe Datei (ist meistens hilfreich für die Übersicht)
+	
+	\newpage\noindent
+	\section{Ohne externe Datei}
+	\begin{lstlisting}[language=TeX]
+		\section{Image mit Label / Referenz}
+		\begin{figure}[h!hbt]
+			\includegraphics[width=\linewidth]{./Abbildungen/Beispiel.jpg}
+			\label{Abb: Beispiel1} %Einzigartig pro Arbeit! Dadurch kann man eine Direkt-Referenz auf das Bild erstellen.
+		\end{figure}
+	\end{lstlisting}
+	
+\end{document}

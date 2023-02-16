@@ -1,0 +1,68 @@
+\documentclass{scrarticle}
+\usepackage[
+%showframe,
+left=2cm,
+right=2cm,
+top=2cm,
+bottom=2cm
+]{geometry} %Layout des Dokuments
+\usepackage{listings}
+\begin{document}
+	\section{normale Liste}
+	\begin{itemize}
+		\item Gegenstand 1
+		\item Gegenstand 2
+	\end{itemize}
+
+	\section{Liste mit verschiedenen Präfixes}
+	\begin{itemize}
+		\item[\labelitemi] Gegenstand 1
+		\item[\labelitemii] Gegenstand 2
+		\item[\labelitemiii] Gegenstand 3
+		\item[\labelitemiv] Gegenstand 4
+		\item[Belieber Präfix] Gegenstand 5
+	\end{itemize}
+	Dies ist auch möglich, im Vorweg schon zu entscheiden:
+	\begin{lstlisting}[language=TeX]
+		\renewcommand{\labelitemi}{$\bullet$}
+		\renewcommand{\labelitemii}{$\bullet$}
+		\renewcommand{\labelitemiii}{$\bullet$}
+		\renewcommand{\labelitemiv}{$\bullet$}
+	\end{lstlisting}
+	, wobei \textbf{\$$\backslash$bullet\$} einem beliebigen Präfix geändert werden kann.
+	
+	\section{Liste in einer Liste in...}
+	\begin{itemize}
+		\item Erste Ebene
+		 \begin{itemize}
+			\item Zweite Ebene
+			 \begin{itemize}
+				\item Dritte Ebene
+				 \begin{itemize}
+					\item Vierte Ebene
+				\end{itemize}
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+
+	\section{Aufzählung}
+	\begin{enumerate}
+		\item Gegenstand 1
+		\item Gegenstand 2
+	\end{enumerate}
+	Bei der Aufzählung ist alles identisch wie bei einer Liste. Hier sind die Präfixe jedoch voreingestellt. Folgende Präfixe kann man auswählen:
+	\begin{itemize}
+		\item[] $\backslash$theenumi
+		\item[] $\backslash$theenumii
+		\item[] $\backslash$theenumiii
+		\item[] $\backslash$theenumiv
+	\end{itemize}
+	Wenn man auch hier im Vorwege das bearbeiten möchte:
+	\begin{lstlisting}[language=TeX]
+		\renewcommand{\labelenumi}{\theenumi}
+		\renewcommand{\labelenumii}{\theenumii}
+		\renewcommand{\labelenumiii}{\theenumiii}
+		\renewcommand{\labelenumiv}{\theenumiv}
+	\end{lstlisting}
+	, wobei $\backslash$theenumi-iv die entsprechende Präfixe sind.
+\end{document}
